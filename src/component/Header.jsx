@@ -2,22 +2,30 @@ import React, { useState } from "react";
 import noteImage from "../assets/images/notes.png";
 import dobleClickImgae from "../assets/images/double-tick.png";
 import plusImage from "../assets/images/plus.png";
-// import { useDispatch } from "react-redux";
-// import { added } from "../redux/todos/action";
+import { useDispatch } from "react-redux";
+import { clearCompleted } from "../redux/todos/action";
+import addTodo from "../redux/todos/thunk/addTodos";
+import updateAllStatus from "../redux/todos/thunk/updateAllStatus";
 
 export default function Header() {
-  const { input, setInput } = useState('');
-  // const dispatch = useDispatch();
+  const [value, setValue] = useState("");
+  const dispatch = useDispatch();
 
-  // const handleInput = (e) => {
-  //   setInput(e.target.value);
-  //   console.log(e.target.value);
-  // };
+  const handleInput = (e) => {
+    setValue(e.target.value);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // dispatch(added(input));
-    // setInput("");
+    value !== "" && dispatch(addTodo(value));
+    setValue("");
+  };
+
+  const handleComplete = () => {
+    dispatch(updateAllStatus());
+  };
+  const handleClearComplete = () => {
+    dispatch(clearCompleted());
   };
 
   return (
@@ -30,8 +38,8 @@ export default function Header() {
         <input
           type="text"
           placeholder="Type your todo"
-          onChange={(e)=> setInput(e.target.value)}
-          value={input}
+          onChange={handleInput}
+          value={value}
           className="w-full text-lg px-4 py-1 border-none outline-none bg-gray-100 text-gray-500"
         />
         <button
@@ -43,9 +51,11 @@ export default function Header() {
       <ul className="flex justify-between my-4 text-xs text-gray-500">
         <li className="flex space-x-1 cursor-pointer">
           <img className="w-4 h-4" src={dobleClickImgae} alt="Complete" />
-          <span>Complete All Tasks</span>
+          <span onClick={handleComplete}>Complete All Tasks</span>
         </li>
-        <li className="cursor-pointer">Clear completed</li>
+        <li onClick={handleClearComplete} className="cursor-pointer">
+          Clear completed
+        </li>
       </ul>
     </div>
   );

@@ -5,6 +5,7 @@ import {
   ALLCOMPLETED,
   CLEARCOMPLETED,
   DELETED,
+  LOADED,
 } from "./actionType";
 
 export const added = (todoText) => {
@@ -47,5 +48,12 @@ export const allCompleted = () => {
 export const clearCompleted = () => {
   return {
     type: CLEARCOMPLETED,
+  };
+};
+
+export const loaded = (todos) => {
+  return {
+    type: LOADED,
+    payload: todos,
   };
 };

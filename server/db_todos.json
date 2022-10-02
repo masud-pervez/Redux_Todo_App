@@ -1,0 +1,75 @@
+{
+  "todos": [
+    {
+      "text": "Semicolon It Solution",
+      "completed": true,
+      "id": 1,
+      "color": "red"
+    },
+    {
+      "text": "Khondoker Rashed Manon",
+      "completed": true,
+      "id": 2,
+      "color": "red"
+    },
+    {
+      "text": "Biprodas Roy",
+      "completed": true,
+      "id": 3,
+      "color": "red"
+    },
+    {
+      "text": "Parvez Mahmud Hira",
+      "completed": true,
+      "id": 4,
+      "color": "red"
+    },
+    {
+      "text": "Milon Hossain",
+      "completed": true,
+      "id": 5,
+      "color": "red"
+    },
+    {
+      "text": "Ruhit Hassan",
+      "completed": true,
+      "id": 6,
+      "color": "yellow"
+    },
+    {
+      "text": "Gowtam Kumar",
+      "completed": true,
+      "id": 7,
+      "color": "yellow"
+    },
+    {
+      "text": "Sheikh Mirajul Islam",
+      "completed": true,
+      "id": 8,
+      "color": "green"
+    },
+    {
+      "text": "Abir Khan",
+      "completed": true,
+      "id": 9,
+      "color": "green"
+    },
+    {
+      "text": "Md. Shamsul Arefin",
+      "completed": true,
+      "id": 10,
+      "color": "yellow"
+    },
+    {
+      "text": "Masud Pervez Tuhin",
+      "completed": true,
+      "id": 11,
+      "color": "yellow"
+    },
+    {
+      "text": "Syed Zamil Hossain",
+      "completed": true,
+      "id": 12
+    }
+  ]
+}

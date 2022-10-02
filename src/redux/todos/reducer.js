@@ -6,6 +6,7 @@ import {
   COLORSELECTED,
   DELETED,
   TOGGLED,
+  LOADED,
 } from "./actionType";
 
 function nextTodoId(todos) {
@@ -61,6 +62,9 @@ const reducer = (state = initialState, action) => {
 
     case CLEARCOMPLETED:
       return state.filter((todo) => !todo.completed);
+
+    case LOADED:
+      return action.payload;
 
     default:
       return state;

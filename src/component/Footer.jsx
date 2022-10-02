@@ -72,16 +72,17 @@ export default function Footer() {
             colors.includes("green") && "bg-green-500"
           } `}
         ></li>
-        <li
-          onClick={() => handleColorChange("red")}
-          className={`h-3 w-3 border-2 border-red-500 md:hover:bg-red-500 rounded-full cursor-pointer ${
-            colors.includes("red") && "bg-red-500"
-          }`}
-        ></li>
+
         <li
           onClick={() => handleColorChange("yellow")}
           className={`h-3 w-3 border-2 border-yellow-500 md:hover:bg-yellow-500 rounded-full cursor-pointer ${
             colors.includes("yellow") && "bg-yellow-500"
+          }`}
+        ></li>
+        <li
+          onClick={() => handleColorChange("red")}
+          className={`h-3 w-3 border-2 border-red-500 md:hover:bg-red-500 rounded-full cursor-pointer ${
+            colors.includes("red") && "bg-red-500"
           }`}
         ></li>
       </ul>
